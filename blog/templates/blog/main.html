@@ -6,10 +6,54 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-   {% block main_section %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light  mb-5">
+    <a class="navbar-brand" href="#"><b>Larnewsk</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-   {% endblock%}
+    <div class="collapse navbar-collapse" id="navbarsExample09">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Главная </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contacts/">Про нас</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+  </nav>
+  <main class="container">
+     <div class="row">
+         <div class="col-md-8">
+             {% block main_section %}
+            {% endblock%}
+         </div>
+         <asside class="col-md-4">
+             <div class="bg-success p-3 rounded">
+                 <h3><b>Интересные статьи</b></h3>
+                 <p>Это поселение было основано Ханенками в середине 19 века. А началось с того, что на речке Ларень решено было построить винокуренный завод.
+                     Перегородили речку, сделали запруду, поселили хутор, который перерос в деревню, и стала она называться Ларневском.
+                     По статическим данным в 1858 году здесь было 18 дворов, в 1892 было 33, в 1897 году – 44 с населением 328 жителей.
+                     Ради достоверности следует отметить, что в Ларневске было еще одно дворянское поместье. Им владели Пригоровские – потомки казачьего сотенного атамана, менее богатые и менее знаменитые.
+                     Построенный при пруде винокуренный завод давал владельцем свыше 6400 ведер водки в год в 60-х годах 19 века.
+                     Известно также, что Богдан Иванович Ханенко, среди многочисленных имений которого была деревня Ларневск, был женат на дочери статского советника Н.А.Терещенко, относившегося к дворянскому роду.
+                 </p>
+             </div>
+                 <div class="p-3 mb-3">
+                     <img src="https://cs4.pikabu.ru/post_img/2016/05/28/7/1464430702122688257.jpg" class="img-thumbnail">
+                     <img src="https://cs4.pikabu.ru/post_img/2016/05/28/7/146443089311094856.jpg" class="img-thumbnail">
+                 </div>
+
+         </asside>
+     </div>
+  </main>
 </body>
 </html>
