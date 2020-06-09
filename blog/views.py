@@ -1,8 +1,28 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
+news = [
+    {
+      'title': 'д. Ларневск Красногорского района Брянской области',
+      'text': 'Деревня Ларневск расположена в северо-западной части Красногорского района Брянской области.',
+      'date': '08.06.2020',
+      'autor':'Georgiy'
+    },
+{
+      'title': 'Удалённость ',
+      'text': 'Удаленность от районного центра Красная Гора составляет 21 км, от железной дороги города Клинцы – 90 км.',
+      'date': '09.06.2020',
+      'autor':''
+    }
+
+]
 def home(request):
-    return HttpResponse('<h2>Hello Larnewsk</h2>')
+    data ={
+        'news': news,
+        'title':'Главная страница блога'
+    }
+    return render(request,'blog/home.html',data)
 
 def contacts(request):
-    return HttpResponse('<h2>Страница с контактами</h2>')
+    return render(request,'blog/contacts.html',{'title':'Page about Us'})
