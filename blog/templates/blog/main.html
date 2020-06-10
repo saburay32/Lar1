@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +9,11 @@
     <title>{{title}}</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{% static 'blog/main.css'%}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light  mb-5">
-    <a class="navbar-brand" href="#"><b>Larnewsk</b></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  mb-5">
+    <a class="navbar-brand" href="{%url 'blog-home'%}"><b>Ларневск-Larnewsk</b></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,15 +21,16 @@
     <div class="collapse navbar-collapse" id="navbarsExample09">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Главная </a>
+          <a class="nav-link" href="{%url 'blog-home'%}">Главная </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contacts/">Про нас</a>
+          <a class="nav-link" href="{%url 'blog-contacts'%}">Про нас</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </form>
+    </div>
+    <div class="navbar-nav">
+        <a href="" class="btn btn-outline-secondary mr-2">Регистрация</a>
+        <a href="" class="btn btn-outline-secondary mr-2">Войти</a>
     </div>
   </nav>
   <main class="container">
@@ -42,15 +45,6 @@
                  {% block aside_news_section %}
                  {% endblock aside_news_section%}
              </div>
-
-               <div class="p-3 mb-3">
-                     <img src="https://forum.vgd.ru/file.php?a=preview&fid=378432&key=717775146" class="img-thumbnail mb-1">
-                   <p>Старая почта в Ларневске. Фото Людмилы Третьяковой (Хабренко)
-                   </p>
-                     <a href="https://forum.vgd.ru/792/88662/" target="_blank">
-                     <button class="btn btn-warning">Посмотреть</button>
-                     </a>
-                 </div>
 
                   <div class="p-3 mb-3">
                      <img src="https://cs4.pikabu.ru/post_img/2016/05/28/7/146443089311094856.jpg" class="img-thumbnail mb-2">
