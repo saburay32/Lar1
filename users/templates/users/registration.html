@@ -2,17 +2,17 @@
 {% block main_section %}
   <div class="form-section">
       <h2>Регистрация на сайте</h2>
-      <form method="post">
+      <form method="POST">
           {% csrf_token %}
-          {{ form }}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-outline-warning">Зарегистрироваться</button>
       </form>
-      <button type="submit" class="btn btn-outline-warning">Зарегистрироваться</button>
   </div>
 {% endblock main_section %}
 
 {% block aside_news_section %}
        <h3><b>Брянщина</b></h3>
-                 <img src="hhttps://avatars.mds.yandex.net/get-pdb/1935703/cdba41b7-cb71-4d06-b4a6-4cc96cbdca9f/s1200?webp=false" class="img-thumbnail mb-1">
+                 <img src="https://avatars.mds.yandex.net/get-pdb/1935703/cdba41b7-cb71-4d06-b4a6-4cc96cbdca9f/s1200?webp=false" class="img-thumbnail mb-1">
                  <p>
                      Новости Брянска и Брянской области
                  </p>
