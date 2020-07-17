@@ -13,3 +13,6 @@ def register(request):
     else:
         form = UserOurRegistation()
     return render(request,'users/registration.html',{'form':form,'title': 'Регистрация пользователя'})
+
+def profile(request):
+    return render(request,'users/profile.html')

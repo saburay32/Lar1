@@ -1,0 +1,17 @@
+{% extends  'blog/main.html' %}
+{% block main_section %}
+  <div class="form-section">
+      <h2>{{ user.username }}</h2>
+  </div>
+{% endblock main_section %}
+
+{% block aside_news_section %}
+       <h3><b>Брянщина</b></h3>
+                 <img src="https://avatars.mds.yandex.net/get-pdb/1935703/cdba41b7-cb71-4d06-b4a6-4cc96cbdca9f/s1200?webp=false" class="img-thumbnail mb-1">
+                 <p>
+                     Новости Брянска и Брянской области
+                 </p>
+                 <a href="https://bryansktoday.ru/" target="_blank">
+                     <button class="btn btn-warning">Прочитать</button>
+                 </a>
+{% endblock aside_news_section%}
